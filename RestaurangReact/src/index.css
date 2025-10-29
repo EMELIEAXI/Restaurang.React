@@ -104,6 +104,19 @@ section.work {
   text-align: center;
   width: 100%;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+form textarea {
+  min-height: 100px;
+}
+form input {
+  min-height: 30px;
+}
+
 
 .Footer1 {
   background-color: #1a1a1a;
