@@ -1,6 +1,7 @@
 import Button from "./Button";
 import PageCaption from "./PageCaption";
 import PageTitle from "./PageTitle";
+import Work from "./Work";
 
 export default function About() {
   return (
