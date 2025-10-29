@@ -106,6 +106,20 @@ section.work {
   align-items: center;
   text-align: center;
 }
+.Footer1 {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.Footer2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 @media (max-width: 768px) {
