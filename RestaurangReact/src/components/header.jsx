@@ -17,7 +17,7 @@ const Header = () => {
           </div>
           <div className={styles["cta-btns"]}>
             <button>Läs mer</button>
-            <button> ▶ Se videon här</button>
+            <button onClick={() => window.open ("https://youtube.com/shorts/iPGcSSYL9Gg?si=XufFLtwC8Ja_MRDd", "_blank")}> ▶ Se videon här</button>
           </div>
         </div>
       </div>
