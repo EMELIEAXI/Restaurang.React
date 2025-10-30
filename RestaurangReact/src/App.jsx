@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './components/Navbar.jsx'
 import Header from "./components/header.jsx"
 import About from './components/About.jsx'
 import Footer from './components/Footer.jsx'
@@ -10,10 +11,11 @@ function App() {
 
   return (
     <>
+    <Navbar></Navbar>
     <Header></Header>
-    {/* <About></About> */}
-    {/* <Work></Work>   */}
-    {/* <Contact></Contact> */}
+    <About></About>
+    <Work></Work>
+    <Contact></Contact>
     <Testimonials></Testimonials>
     <Footer></Footer>
     </>
