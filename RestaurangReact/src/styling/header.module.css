@@ -1,0 +1,85 @@
+header {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header-background {
+  background-image: url(../assets/sushi-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+  height: 800px;
+}
+
+.header-content {
+  color: orange;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10rem;
+}
+
+.heading {
+  background-color: rgba(0, 0, 0, 0.735);
+  padding: 5% 5% 2% 5%;
+}
+
+.phone-slogan {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.phone-link {
+  display: inline-block;
+  color: white;
+  transition: 
+    transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+.phone-link:hover {
+  color: white;
+  transform: scale(1.1) translateY(-2px);
+  text-shadow: 0 0 12px rgba(255, 165, 0, 0.8);;
+}
+
+.cta-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.cta-btns button {
+  background-color: black;
+  color: white;
+  border: 2px solid orange;
+}
+
+.cta-btns button:hover {
+  background-color: orange;
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .cta-btns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .phone-slogan {
+    font-size: 1.5rem;
+  }
+}
