@@ -3,7 +3,6 @@ import styles from "../styling/header.module.css"
 
 const Header = () => {
   return (
-    <header>
       <div className={styles["header-background"]}>
         <div className={styles["header-content"]}>
           <div className={styles["heading"]}>
@@ -21,7 +20,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
   );
 }
 
