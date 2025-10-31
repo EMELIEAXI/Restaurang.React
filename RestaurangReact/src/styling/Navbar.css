@@ -2,14 +2,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 90px;
   width: 100%;
+  background: #1a1a1a;
+  padding: 0 2.5rem;
 }
 .nav-logo-container {
     max-width: 100px;
 }
 .nav-logo-container img {
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
 }
 .navbar-menu-container {
@@ -18,7 +19,7 @@ nav {
 .navbar-links-container a {
   margin-right: 3rem;
   text-decoration: none;
-  color: black;
+  color: #f1f1f1;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -36,7 +37,7 @@ nav {
   font-size: 1.15rem;
 }
 .primary-button:hover {
-  background-color: #e48f0f;
+  background-color: #c77d0e;
 }
 .navbar-menu-container svg {
   font-size: 1.5rem;
@@ -44,22 +45,8 @@ nav {
 }
 
 @media (max-width: 48rem) {
-  .navbar-links-container a {
-    margin-right: 1rem;
-    font-size: 1rem;
-  }
-  .primary-button {
-    font-size: 1rem;
-  }
+
 }
-@media (max-width: 30rem) {
-  .nav-logo-container {
-    max-width: 140px;
-  }
-  .navbar-links-container {
-    display: none;
-  }
-  .navbar-menu-container {
-    display: flex;
-  }
+@media (max-width: 64rem) {
+
 }

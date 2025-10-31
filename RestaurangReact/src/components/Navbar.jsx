@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Logo from "../Assets/logo.png";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 
 import Box from "@mui/material/Box";
@@ -14,9 +13,9 @@ import ListItemText from "@mui/material/ListItemText";
 
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
-import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 
 import "../Styling/Navbar.css";
 
@@ -26,25 +25,22 @@ const Navbar = () => {
   const menuOptions = [
     { text: "Hem", icon: <HomeIcon /> },
     { text: "Om", icon: <InfoIcon /> },
-    { text: "Referenser", icon: <CommentRoundedIcon /> },
+    { text: "Tjänster", icon: <RoomServiceIcon /> },
     { text: "Kontakt", icon: <PhoneRoundedIcon /> },
-    { text: "Vagn", icon: <ShoppingCartRoundedIcon /> },
+    { text: "Referenser", icon: <CommentRoundedIcon /> },
   ];
 
   return (
     <nav id="navbar">
       <div className="nav-logo-container">
-        <img src={Logo} alt="Restaurang Logo" />
+        <a href="#home"><img src={Logo} alt="Restaurang Logo" /></a>
       </div>
 
       <div className="navbar-links-container">
-        <a href="#home">Hem</a>
         <a href="#about">Om</a>
-        <a href="#testimonials">Referenser</a>
+        <a href="#services">Tjänster</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#">
-          <BsCart2 className="navbar-cart-icon" />
-        </a>
+        <a href="#testimonials">Referenser</a>
         <button className="primary-button">Boka nu</button>
       </div>
 
