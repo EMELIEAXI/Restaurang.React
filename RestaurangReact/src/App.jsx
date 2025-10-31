@@ -13,7 +13,7 @@ function App() {
     <>
     <Navbar></Navbar>
     <Header></Header>
-    <About></About>   
+    <About></About> 
     <Work></Work>
     <Contact></Contact>
     <Testimonials></Testimonials>
