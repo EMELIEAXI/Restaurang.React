@@ -3,7 +3,14 @@
   padding: 60px 20px;
   background: none; /* eller en svag färg om du vill */
   color: inherit;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
+
 
 .testimonials-header {
   text-align: center;
@@ -117,6 +124,9 @@
 @media (max-width: 768px) {
   .testimonial-card {
     flex: 0 0 85%;
+  }
+  .testimonials-section {
+  width: 80%;
   }
   .scroll-btn {
     display: none; /* döljer pilar på små skärmar (touch-swipe) */
