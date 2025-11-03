@@ -22,8 +22,12 @@ form input {
   min-height: 30px;
 }
 @media (max-width: 768px) {
-  .Contact {
+  /* .Contact {
     max-width: 250px;
+  } */
+  .contact-container {
+    width: 80%;
+    background-color: white;
   }
 
 }
