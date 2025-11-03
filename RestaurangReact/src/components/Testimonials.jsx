@@ -18,7 +18,7 @@ export default function Testimonials() {
   };
 
   return (
-      <section className="testimonials-section">
+      <section id ="testimonials" className="testimonials-section">
         <PageTitle title="Vad våra gäster säger"/>
         <PageCaption caption="Små stories från kunder som redan upptäckt våra rätter." />
 

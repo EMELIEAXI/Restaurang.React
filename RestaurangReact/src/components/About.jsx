@@ -8,7 +8,7 @@ import styles2 from "../styling/header.module.css";
 
 export default function About() {
   return (
-    <section className={styles["about"]}>
+    <section id ="about" className={styles["about"]}>
         <img src="src/assets/food-3581341_1280.jpg" alt="Sushi" id="sushi-img" />
         <div className={styles["text"]}>
         <PageTitle title="En plats för sushiälskare – och nyfikna" />

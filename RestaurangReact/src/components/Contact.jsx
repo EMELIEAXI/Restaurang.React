@@ -4,7 +4,7 @@ import styles2 from "../styling/header.module.css";
 
 export default function Contact() {
   return (
-    <div className={styles["contact-container"]}>
+    <div id="contact" className={styles["contact-container"]}>
       <div className={styles["Contact"]}>
         <PageTitle title="Kontakta oss gärna" />
 

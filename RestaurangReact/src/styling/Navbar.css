@@ -2,25 +2,50 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 90px;
   width: 100%;
+  background: #1a1a1a;
+  padding: 1rem 2.5rem;
 }
 .nav-logo-container {
     max-width: 100px;
 }
 .nav-logo-container img {
-    max-width: 200px;
+    max-width: 100px;
     height: auto;
 }
-.navbar-menu-container {
-  display: none;
+.navbar-links-container {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links-container li {
+  margin-right: 3rem;
 }
 .navbar-links-container a {
-  margin-right: 3rem;
   text-decoration: none;
-  color: black;
+  color: #f1f1f1;
   font-size: 1.1rem;
   font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-links-container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 2px;
+  bottom: -4px;
+  background-color: #fe9e0d;
+  transition: width 0.3s ease;
+}
+.navbar-links-container a:hover {
+  color: #fe9e0d;
+}
+.navbar-links-container a:hover::after {
+  width: 100%;
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
@@ -32,34 +57,27 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
-.navbar-cart-icon {
-  font-size: 1.15rem;
-}
 .primary-button:hover {
-  background-color: #e48f0f;
+  background-color: #c77d0e;
+}
+.navbar-links-container {
+  display: none;
+}
+.navbar-menu-container {
+  display: block;
 }
 .navbar-menu-container svg {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-@media (max-width: 48rem) {
-  .navbar-links-container a {
-    margin-right: 1rem;
-    font-size: 1rem;
-  }
-  .primary-button {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 30rem) {
-  .nav-logo-container {
-    max-width: 140px;
+@media (min-width: 64rem) {
+  .nav-logo-container img {
+      max-width: 160px;
   }
   .navbar-links-container {
-    display: none;
+    display: flex;
   }
   .navbar-menu-container {
-    display: flex;
+    display: none;
   }
 }

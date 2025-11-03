@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Logo from "../Assets/logo.png";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import HeaderMenuItem from "./HeaderMenuItem";
+import "../Styling/Navbar.css";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -14,39 +15,35 @@ import ListItemText from "@mui/material/ListItemText";
 
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
-import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-
-import "../Styling/Navbar.css";
+import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const menuOptions = [
-    { text: "Hem", icon: <HomeIcon /> },
-    { text: "Om", icon: <InfoIcon /> },
-    { text: "Referenser", icon: <CommentRoundedIcon /> },
-    { text: "Kontakt", icon: <PhoneRoundedIcon /> },
-    { text: "Vagn", icon: <ShoppingCartRoundedIcon /> },
+    { text: "Hem", icon: <HomeIcon />, href: "#navbar" },
+    { text: "Om", icon: <InfoIcon />, href: "#about" },
+    { text: "Tjänster", icon: <RoomServiceIcon />, href: "#work" },
+    { text: "Kontakt", icon: <PhoneRoundedIcon />, href: "#contact" },
+    { text: "Referenser", icon: <CommentRoundedIcon />, href: "#testimonials" },
   ];
 
   return (
     <nav id="navbar">
       <div className="nav-logo-container">
-        <img src={Logo} alt="Restaurang Logo" />
+        <a href="#home">
+          <img src={Logo} alt="Restaurang Logo" />
+        </a>
       </div>
 
-      <div className="navbar-links-container">
-        <a href="#home">Hem</a>
-        <a href="#about">Om</a>
-        <a href="#testimonials">Referenser</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#">
-          <BsCart2 className="navbar-cart-icon" />
-        </a>
+      <ul className="navbar-links-container">
+        {menuOptions.map((item) => (
+          <HeaderMenuItem key={item.text} text={item.text} href={item.href} />
+        ))}
         <button className="primary-button">Boka nu</button>
-      </div>
+      </ul>
 
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -62,7 +59,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component="a" href={item.href}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
