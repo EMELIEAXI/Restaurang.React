@@ -7,7 +7,7 @@ export default function Work() {
   return (
 
     <div className={styles["spacer-100"]}>
-        <section className={styles["work"]}>
+        <section id="work" className={styles["work"]}>
         <PageTitle title="Hur fungerar våra tjänster?" />
         <PageCaption caption="Vi strävar efter att erbjuda en unik och minnesvärd matupplevelse genom vår passion för kvalitet och kreativitet." />
 

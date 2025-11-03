@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Logo from "../Assets/logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import HeaderMenuItem from "./HeaderMenuItem";
+import "../Styling/Navbar.css";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -17,32 +19,31 @@ import RoomServiceIcon from "@mui/icons-material/RoomService";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 
-import "../Styling/Navbar.css";
-
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const menuOptions = [
-    { text: "Hem", icon: <HomeIcon /> },
-    { text: "Om", icon: <InfoIcon /> },
-    { text: "Tjänster", icon: <RoomServiceIcon /> },
-    { text: "Kontakt", icon: <PhoneRoundedIcon /> },
-    { text: "Referenser", icon: <CommentRoundedIcon /> },
+    { text: "Hem", icon: <HomeIcon />, href: "#navbar" },
+    { text: "Om", icon: <InfoIcon />, href: "#about" },
+    { text: "Tjänster", icon: <RoomServiceIcon />, href: "#work" },
+    { text: "Kontakt", icon: <PhoneRoundedIcon />, href: "#contact" },
+    { text: "Referenser", icon: <CommentRoundedIcon />, href: "#testimonials" },
   ];
 
   return (
     <nav id="navbar">
       <div className="nav-logo-container">
-        <a href="#home"><img src={Logo} alt="Restaurang Logo" /></a>
+        <a href="#home">
+          <img src={Logo} alt="Restaurang Logo" />
+        </a>
       </div>
 
-      <div className="navbar-links-container">
-        <a href="#about">Om</a>
-        <a href="#services">Tjänster</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#testimonials">Referenser</a>
+      <ul className="navbar-links-container">
+        {menuOptions.map((item) => (
+          <HeaderMenuItem key={item.text} text={item.text} href={item.href} />
+        ))}
         <button className="primary-button">Boka nu</button>
-      </div>
+      </ul>
 
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -58,7 +59,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component="a" href={item.href}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
