@@ -1,5 +1,6 @@
 import PageTitle from "./PageTitle";
 import styles from "../styling/Contact.module.css";
+import styles2 from "../styling/header.module.css";
 
 export default function Contact() {
   return (
@@ -12,7 +13,9 @@ export default function Contact() {
             <input type="email" name="email" required />
             <label for="message">Meddelande:</label>
             <textarea name="message" required></textarea>
+            <div className={styles2["cta-btns"]}>
             <button type="submit">Skicka</button>
+            </div>
           </form>
       </div>
     </div>

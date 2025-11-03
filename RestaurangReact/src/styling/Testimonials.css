@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 
@@ -69,7 +69,7 @@
 
 /* ett kort (kortlayout) */
 .testimonial-card {
-  flex: 0 0 300px; /* bredd på varje kort */
+  flex: 0 0 30%; /* bredd på varje kort */
   background: rgba(255,255,255,0.03);
   border-radius: 10px;
   padding: 18px;
@@ -122,16 +122,44 @@
 
 /* Anpassning för små skärmar */
 @media (max-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 85%;
-  }
   .testimonials-section {
-  width: 80%;
-  }
-  .scroll-btn {
-    display: none; /* döljer pilar på små skärmar (touch-swipe) */
-  }
-  .testimonials-wrapper {
-    padding: 0 10px;
+    display: none;
   }
 }
+  /* .testimonials-section {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .testimonials-wrapper {
+    padding: 0;
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .testimonials-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    padding: 0 10px;
+    scrollbar-width: none; /* göm scrollbar */
+  /* }
+
+  .testimonials-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%; /* exakt ett kort per “vy” */
+    /* scroll-snap-align: center; snäpper till mitten */
+    /* background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  } */
+/* } */
