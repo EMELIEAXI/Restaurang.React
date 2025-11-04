@@ -76,4 +76,8 @@
   .phone-slogan {
     font-size: 1.5rem;
   }
+
+  .header-content {
+    text-align: center;
+  }
 }
